@@ -109,3 +109,4 @@ source $ZSH/oh-my-zsh.sh
 export VISUAL="nvim"
 export EDIT="nvim"
 alias teiwiet="cd ~/Main && nvim ."
+alias warp="warp-cli"
