@@ -3,3 +3,6 @@
 -- Add any additional keymaps here
 vim.keymap.set("n", "<A-l>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move buffer left" })
 vim.keymap.set("n", "<A-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffer left" })
+vim.keymap.set("n", "<M-q>", function()
+  require("snacks").bufdelete()
+end, { desc = "Delete Buffer" })
