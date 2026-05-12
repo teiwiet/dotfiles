@@ -77,7 +77,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
+PROMPT_EOL_MARK=""
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
