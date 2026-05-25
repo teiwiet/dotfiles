@@ -1,0 +1,12 @@
+# 1. Add repo
+sudo rpm --import https://pkg.cloudflareclient.com/pubkey.gpg
+sudo dnf config-manager addrepo --from-repofile=https://pkg.cloudflareclient.com/cloudflare-warp-ascii.repo
+
+# 2. Download rồi cài bằng rpm (bỏ qua webkit2gtk3)
+sudo dnf download cloudflare-warp.x86_64 --destdir=/tmp
+sudo rpm -ivh --nodeps /tmp/cloudflare-warp-*.rpm
+
+# 3. Kết nối
+sudo systemctl enable --now warp-svc
+warp-cli registration new
+warp-cli connect
